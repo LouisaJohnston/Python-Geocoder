@@ -30,4 +30,5 @@ for destination in destinations:
     weather_description = result['weather'][0]['description']
     temperature = result['main']['temp']
     converted_temp = (temperature - 273.15) * (9/5) + 32
-    print(f"At the {destination} right now, there are {weather_description} with a temperature of {converted_temp}")
+    float_temp = int(converted_temp)
+    print(f"At the {destination} right now, there are {weather_description} with a temperature of {float_temp}")
